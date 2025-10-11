@@ -36,10 +36,7 @@
     .hero-image-container::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       border: 3px solid #b89a74;
       border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
       animation: morph 8s ease-in-out infinite;
@@ -47,11 +44,9 @@
 
     .hero-image {
       position: absolute;
-      top: 50%;
-      left: 50%;
+      top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      width: 90%;
-      height: 90%;
+      width: 90%; height: 90%;
       object-fit: cover;
       border-radius: 45% 55% 60% 40% / 50% 45% 55% 50%;
       animation: morph 8s ease-in-out infinite;
@@ -65,8 +60,7 @@
 
     .typing-cursor {
       display: inline-block;
-      width: 3px;
-      height: 1.1em;
+      width: 3px; height: 1.1em;
       background-color: #6D4300;
       animation: blink 0.8s infinite;
       margin-left: 4px;
@@ -84,19 +78,18 @@
 
     html { overflow-x: hidden; }
 
-    /* --- Dark Mode Styling --- */
+    /* Dark Mode */
     html.dark {
-      background: #1a1a1a;
+      background: #121212;
       color: #f1f1f1;
     }
+
     html.dark header {
       background: rgba(0, 0, 0, 0.7);
     }
-    html.dark section {
-      background: rgba(30, 30, 30, 0.6);
-    }
+
     html.dark a, html.dark h2, html.dark h3 {
-      color: #f5d7a5;
+      color: #f7d6a5;
     }
   </style>
 
@@ -130,13 +123,15 @@
         <a href="#certificates" class="hover:text-brand-brown transition-colors duration-300">Certificates</a>
       </div>
 
-      <!-- Dark mode toggle -->
+      <!-- Dark Mode Toggle -->
       <button id="dark-mode-toggle" class="ml-4 text-2xl text-brand-brown hover:text-brand-brown-light transition-colors">
         <i class="fa-solid fa-moon"></i>
       </button>
 
-      <a href="#contact" class="hidden md:inline-block border border-brand-brown text-brand-brown px-6 py-2 rounded-full hover:bg-brand-brown hover:text-white transition-all duration-300">Contact</a>
-      <button id="hamburger-btn" class="md:hidden text-2xl text-brand-brown"><i class="fa-solid fa-bars"></i></button>
+      <a href="#contact" class="hidden md:inline-block border border-brand-brown text-brand-brown px-6 py-2 rounded-full hover:bg-brand-brown hover:text-white transition-all duration-300">Contact Us</a>
+      <button id="hamburger-btn" class="md:hidden text-2xl text-brand-brown">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
   </header>
 
@@ -149,41 +144,38 @@
       <a href="#services" class="mobile-link block">Services</a>
       <a href="#Key Projects" class="mobile-link block">Key Projects</a>
       <a href="#certificates" class="mobile-link block">Certificates</a>
-      <a href="#contact" class="mobile-link block mt-8 border border-white px-6 py-2 rounded-full">Contact</a>
+      <a href="#contact" class="mobile-link block mt-8 border border-white px-6 py-2 rounded-full">Contact Us</a>
     </div>
-    <button id="close-btn" class="absolute top-6 right-6 text-3xl text-white"><i class="fa-solid fa-xmark"></i></button>
+    <button id="close-btn" class="absolute top-6 right-6 text-3xl text-white">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
   </div>
 
-  <main class="container mx-auto px-6">
+  <!-- Your existing sections (Hero, About, Skills, Services, Projects) stay unchanged -->
 
-    <!-- Hero Section (unchanged) -->
-    <!-- ... your existing hero, about, skills, services, and projects sections ... -->
-
-    <!-- Certificates / Awards Section -->
-    <section id="certificates" class="py-24 bg-white/50 rounded-2xl animated-section">
-      <h2 class="text-4xl font-bold text-center mb-12">Certificates & Awards</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-          <i class="fas fa-certificate text-3xl text-brand-brown mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">CompTIA Security+</h3>
-          <p class="text-gray-600">Validated knowledge of cybersecurity fundamentals and best practices.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-          <i class="fas fa-award text-3xl text-brand-brown mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Best IT Innovator Award</h3>
-          <p class="text-gray-600">Recognized for developing a system that improved helpdesk efficiency by 40%.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
-          <i class="fas fa-laptop-code text-3xl text-brand-brown mb-4"></i>
-          <h3 class="text-xl font-bold mb-2">Cisco CCNA</h3>
-          <p class="text-gray-600">Certified in network configuration, routing, and troubleshooting.</p>
-        </div>
+  <!-- Certificates Section -->
+  <section id="certificates" class="py-24 bg-white/50 rounded-2xl animated-section">
+    <h2 class="text-4xl font-bold text-center mb-12">Certificates & Awards</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <i class="fas fa-certificate text-3xl text-brand-brown mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">CompTIA Security+</h3>
+        <p class="text-gray-600">Validated knowledge of cybersecurity fundamentals and best practices.</p>
       </div>
-    </section>
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <i class="fas fa-award text-3xl text-brand-brown mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Best IT Innovator Award</h3>
+        <p class="text-gray-600">Recognized for developing a system that improved helpdesk efficiency by 40%.</p>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <i class="fas fa-laptop-code text-3xl text-brand-brown mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Cisco CCNA</h3>
+        <p class="text-gray-600">Certified in network configuration, routing, and troubleshooting.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section (unchanged) -->
-    <!-- ... -->
-  </main>
+  <!-- Contact Section (yours remains unchanged) -->
 
   <footer class="text-center py-8 border-t border-brand-brown/20">
     <p class="text-gray-600">&copy; 2025 All Rights Reserved.</p>
@@ -204,30 +196,27 @@
       const html = document.documentElement;
       const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-      // --- Dark Mode ---
+      // Dark Mode
       if (localStorage.theme === 'dark') html.classList.add('dark');
       darkToggle.addEventListener('click', () => {
         html.classList.toggle('dark');
         html.classList.contains('dark') ? localStorage.theme = 'dark' : localStorage.removeItem('theme');
       });
 
-      // --- Mobile Menu ---
+      // Mobile Menu
       hamburgerBtn.addEventListener('click', () => mobileMenu.classList.remove('-translate-x-full'));
       const closeMenu = () => mobileMenu.classList.add('-translate-x-full');
       closeBtn.addEventListener('click', closeMenu);
       mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-      // --- Scroll-to-Top ---
+      // Scroll-to-Top
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          scrollTopBtn.classList.remove('hidden');
-        } else {
-          scrollTopBtn.classList.add('hidden');
-        }
+        if (window.scrollY > 300) scrollTopBtn.classList.remove('hidden');
+        else scrollTopBtn.classList.add('hidden');
       });
       scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-      // --- GSAP Animation Trigger ---
+      // GSAP Animation
       gsap.registerPlugin(ScrollTrigger);
       gsap.utils.toArray('.animated-section').forEach(section => {
         gsap.from(section, {
